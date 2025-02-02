@@ -18,3 +18,5 @@ projectsEl.insertAdjacentHTML('beforebegin',`
   <button class="filters-project">Objets</button>
   <button class="filters-project">Appartements</button>
   <button class="filters-project">Hotels & restaurants</button>`)
+
+  
