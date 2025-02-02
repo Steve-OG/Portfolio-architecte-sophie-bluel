@@ -1,6 +1,7 @@
 const projectsEl = document.querySelector('.gallery');
 
-fetch("http://localhost:5678/api/works")
+function fetchWork(projectsEl) {
+  fetch("http://localhost:5678/api/works")
   .then(res => res.json())
   .then(data => {
     data.forEach(post => {
@@ -11,12 +12,15 @@ fetch("http://localhost:5678/api/works")
         </figure>`);
         });
       });
+};
+
+fetchWork(projectsEl);
 
 projectsEl.insertAdjacentHTML('beforebegin',`
   <nav id="filters-nav">
-  <button class="filters-project">Tous</button>
-  <button class="filters-project">Objets</button>
-  <button class="filters-project">Appartements</button>
-  <button class="filters-project">Hotels & restaurants</button>`)
+  <button>Tous</button>
+  <button>Objets</button>
+  <button>Appartements</button>
+  <button>Hotels & restaurants</button>`)
 
   
